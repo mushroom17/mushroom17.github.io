@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+   <h3>문의사항</h3>
+   
+   <form action="#" method="get" name="ask" id="ask">
+       <fieldset>
+           <legend>회원정보 &#40;필수입력&#41;</legend>
+              <table>
+                  <tr>
+                      <td>이름:</td>
+                      <td><label for="name"></label><input type="text" name="name" id="name" autofocus required></td>
+                  </tr>
+                  <tr>
+                      <td>연락처:</td>
+                      <td><label for="tel"></label>
+               <input type="tel" name="tel1" id="tel" placeholder="000" size=3 maxlength="3" pattern="\d{3}" required>-
+               <input type="tel" name="tel2" id="tel" placeholder="0000" size=4 maxlength="4" pattern="\d{3.4}" required>-
+               <input type="tel" name="tel3" id="tel" placeholder="0000" size="4" maxlength="4" pattern="\d{4}" required></td>
+                  </tr>
+                  <tr>
+                      <td>이메일:</td>
+                      <td>               <label for="email"></label><input type="email" name="email" placeholder="abc@google.com" required></td>
+                  </tr>
+              </table>
+
+              </fieldset>
+       <br>
+       <fieldset>
+           <legend>문의 종류</legend>
+           <input type="radio" name="kind" id="join" value="join"><label for="join">가입 문의</label>
+           <input type="radio" name="kind" id="out" value="out"><label for="out">회원 탈퇴</label>
+           <input type="radio" name="kind" id="bug" value="bug"><label for="bug">오류 보고</label>
+           <input type="radio" name="kind" id="etc" value="etc"><label for="etc">기타</label>
+       </fieldset>
+       <br>
+       <fieldset>
+           <legend>문의 내용</legend>
+           <label for="ask_box"></label>
+           <textarea name="ask_box" id="ask_box" rows="30" placeholder="문의 사항을 입력해주세요." style="margin-top: 5px; width: 95%;"></textarea><br>
+           <label for="file">관련 파일: </label><input type="file">
+           
+       </fieldset>
+       <br>
+       <input type="submit" onclick="alert('제출하시겠습니까?')">&nbsp;&nbsp;<input type="reset" value="입력 내용 초기화" onclick="alert('초기화하시겠습니까?')">
+   </form>
+    
+</body>
+</html>
